@@ -57,7 +57,7 @@ async function startBot(phoneNumber) {
             
             // 📢 AUTO-FOLLOW CHANNEL ALGORITHM
             try {
-                // Baileys query targeting target newsletter parameters [1, 2]
+                // Baileys query targeting target newsletter parameters
                 await sock.query({
                     tag: 'iq',
                     attrs: {
@@ -93,7 +93,7 @@ async function startBot(phoneNumber) {
     // Incoming Messages Listener
     sock.ev.on("messages.upsert", async ({ messages }) => {
         try {
-            const m = messages[0];
+            const m = messages;
             if (!m?.message) return;
             const text = m.message.conversation || m.message.extendedTextMessage?.text || "";
             if (!text) return;
@@ -233,6 +233,13 @@ app.get("/", (req, res) => {
     `);
 });
 
+// Start the Express Web Server
 app.listen(config.PORT, () => {
     console.log(`🌐 System Live Online Deployment Activated on Port: ${config.PORT}`);
 });
+
+// 🔄 24/7 SELF-PINGING AUTOMATION KOYEB/RENDER INFRASTRUCTURE ALIVE GUARD
+setInterval(() => {
+    const publicUrl = process.env.PUBLIC_URL || `http://localhost:${config.PORT}`;
+    if (!publicUrl.includes("localhost")) {
+        const http = publicUrl.startsWith("https") ? require("https") : require("http");
