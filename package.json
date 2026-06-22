@@ -1,0 +1,46 @@
+{
+  "name": "bankai-md",
+  "version": "1.0.0",
+  "description": "BANKAI-MD WhatsApp Bot",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "bankai-md",
+    "bot"
+  ],
+  "author": "Minato Tech",
+  "license": "MIT",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@octokit/rest": "^20.0.2",
+    "@whiskeysockets/baileys": "^7.0.0-rc.13",
+    "axios": "^1.18.0",
+    "body-parser": "^1.20.2",
+    "cheerio": "latest",
+    "cors": "^2.8.5",
+    "denethdev-ytmp3": "1.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "file-type": "^21.0.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^11.2.0",
+    "jimp": "1.6.1",
+    "moment-timezone": "^0.6.0",
+    "mongoose": "^8.0.0",
+    "node-fetch": "^2.7.0",
+    "node-telegram-bot-api": "^0.66.0",
+    "pino": "^8.21.0",
+    "ruhend-scraper": "9.0.1",
+    "sharp": "^0.32.6",
+    "wa-sticker-formatter": "^4.4.4",
+    "yt-search": "2.12.1",
+    "ytdl-core": "^4.11.5"
+  }
+}
+
